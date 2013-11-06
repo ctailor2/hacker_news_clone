@@ -1,0 +1,27 @@
+<table>
+  <tbody>
+    <tr>
+      <td>*</td>
+      <td><a href="<%= @post.url %>"><%= @post.title %></a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="subtext">
+        by <a href="/users/<%= @post.user_id %>"><%= @post.user.username %></a>
+        | <a href="/posts/<%= @post.id %>">discuss</a>
+      </td>
+    </tr>
+    <tr style="height:10px"></tr>
+    <tr>
+      <td></td>
+      <td>
+        <form action="" method="POST">
+          <textarea name="text" rows="6" cols="60"></textarea>
+          <br>
+          <br>
+          <input type="submit" value="add comment">
+        </form>
+      </td>
+    </tr>
+  </tbody>
+</table>

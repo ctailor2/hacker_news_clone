@@ -1,8 +1,12 @@
-<div class="container">
-  <table>
+<!-- <div class="container"> -->
+  <table class="main-table">
     <tbody>
       <!-- header -->
-      <tr><h1>Posts!</h1></tr>
+      <tr>
+        <td>
+          <%= erb :_header %>
+        </td>
+      </tr>
       <!-- break between header and table of posts -->
       <tr style="height:10px"></tr>
       <!-- table of posts -->
@@ -23,10 +27,9 @@
               <tr>
                 <td colspan="2"></td>
                 <td class="subtext">
-                  by <a href="/"><%= post.user.username %></a>
-                  | <a href="/">discuss</a>
+                  by <a href="/users/<%= post.user_id %>"><%= post.user.username %></a>
+                  | <a href="/posts/<%= post.id %>">discuss</a>
                 </td>
-<!--                 <td colspan="3">Placeholder for time created and link to comments</td> -->
               </tr>
               <!-- third tr for break between posts -->
               <tr style="height:5px"></tr>
@@ -40,4 +43,4 @@
       <tr></tr>
     </tbody>
   </table>
-</div>
+<!-- </div> -->

@@ -1,0 +1,54 @@
+<b>Login</b>
+<br>
+<br>
+<form action="login" method="POST">
+  <table>
+    <tbody>
+      <tr>
+        <td>username:</td>
+        <td>
+          <input type="text" name="user[username]">
+        </td>
+      </tr>
+      <tr>
+        <td>password:</td>
+        <td>
+          <input type="password" name="user[password]">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <input type="submit" value="login">
+</form>
+<br>
+<br>
+<b>Create Account</b>
+<br>
+<br>
+<form action="/register" method="POST">
+  <table>
+    <tbody>
+      <tr>
+        <td>username:</td>
+        <td>
+          <input type="text" name="user[username]">
+        </td>
+      </tr>
+      <tr>
+        <td>password:</td>
+        <td>
+          <input type="password" name="user[password]">
+        </td>
+      </tr>
+    </tbody>      
+  </table>
+  <br>
+  <input type="submit" value="create account">
+</form>
+<br>
+<% if @errors %>
+  <% @errors.each do |message| %>
+    <p style="color:red"><%= message %></p>
+  <% end %>
+<% end %>

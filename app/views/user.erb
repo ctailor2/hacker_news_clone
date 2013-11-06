@@ -1,0 +1,40 @@
+<div class="container">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <%= erb :_header %>
+        </td>
+      </tr>
+      <tr style="height:10px"></tr>
+      <tr>
+        <td>
+          <table>
+            <tbody>
+              <tr>
+                <td>user:</td>
+                <td><%= @user.username %></td>
+              </tr>
+              <tr>
+                <td>created:</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <a href="/users/<%= @user.id %>/posts">posts</a>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <a href="/users/<%= @user.id %>/comments">comments</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

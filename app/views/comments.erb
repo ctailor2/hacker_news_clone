@@ -1,0 +1,52 @@
+<div class="container">
+  <table>
+    <tbody>
+      <!-- header -->
+      <tr>
+        <td>
+          <%= erb :_header %>
+        </td>
+      </tr>
+      <!-- break between header and table of posts -->
+      <tr style="height:10px"></tr>
+      <!-- table of posts -->
+      <tr>
+        <td>
+          <!-- table for post title, and box for adding comment -->
+
+          <% if @post %>
+            <%= erb :_post_and_comment_box %>
+          <% end %>
+
+          <br>
+          <br>
+          <!-- all comments on post -->
+          <table>
+            <tbody>
+              <!-- each comment -->
+              <% @comments.each do |comment| %>
+              <tr>
+                <td>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>|</td>
+                        <td>*</td>
+                        <td><%= comment.text %></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <br>
+          <br>
+        </td>
+      </tr>
+      <!-- footer -->
+      <tr></tr>
+    </tbody>
+  </table>
+</div>

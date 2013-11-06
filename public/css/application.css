@@ -8,3 +8,15 @@
 th {
   text-align: left;
 }
+
+.logo-header {
+  width:18px;
+  height:18px;
+  border: 1px #ffffff solid;
+}
+
+.main-table {
+  width:85%;
+  margin:auto;
+  background-color: #f6f6ef;
+}

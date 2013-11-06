@@ -1,0 +1,29 @@
+<table>
+  <tbody>
+    <td style="width:18px;padding-right:4px">
+      <a href="http://127.0.0.1:9393/">
+        <img class="logo-header" src="https://news.ycombinator.com/y18.gif">
+      </a>
+    </td>
+    <td>
+      <b><a href="http://127.0.0.1:9393/">Hacker News</a></b>
+
+      <a href="">new</a>
+      |
+      <a href="">comments</a>
+      |
+      <a href="">ask</a>
+      |
+      <a href="">submit</a>
+    </td>
+    <td>
+      <% if logged_in? %>
+        <a href="/logout">logout</a>
+      <% else %>
+        <a href="/login">login</a>        
+      <% end %>
+    </td>
+  </tbody>
+</table>
+
+
