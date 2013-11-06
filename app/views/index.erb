@@ -1,23 +1,43 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
-
   <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
+    <tbody>
+      <!-- header -->
+      <tr><h1>Posts!</h1></tr>
+      <!-- break between header and table of posts -->
+      <tr style="height:10px"></tr>
+      <!-- table of posts -->
+      <tr>
+        <td>
+          <table>
+            <tbody>
+              <!-- 3 trs for each post -->
+              <% num = 1 %>
+              <% @posts.each do |post| %>
+              <!-- first tr for title -->
+              <tr>
+                <td><%= num %></td>
+                <td>*</td>
+                <td><a href="<%= post.url %>"><%= post.title %></a></td>
+              </tr>
+              <!-- second tr for time created, and link to comments -->
+              <tr>
+                <td colspan="2"></td>
+                <td class="subtext">
+                  by <a href="/"><%= post.user.username %></a>
+                  | <a href="/">discuss</a>
+                </td>
+<!--                 <td colspan="3">Placeholder for time created and link to comments</td> -->
+              </tr>
+              <!-- third tr for break between posts -->
+              <tr style="height:5px"></tr>
+              <% num += 1 %>
+              <% end %>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!-- footer -->
+      <tr></tr>
+    </tbody>
   </table>
 </div>
