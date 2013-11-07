@@ -2,14 +2,14 @@
   <table class="main-table">
     <tbody>
       <tr>
-        <td>
+        <td class="orange_header_td">
           <%= erb :_header %>
         </td>
       </tr>
       <tr style="height:10px"></tr>
       <tr>
         <td>
-          <table>
+          <table class="font13-gray">
             <tbody>
               <tr>
                 <td>user:</td>
@@ -19,16 +19,16 @@
                 <td>created:</td>
                 <td></td>
               </tr>
-              <tr>
+              <tr class="font13-black">
                 <td></td>
                 <td>
-                  <a href="/users/<%= @user.id %>/posts">posts</a>
+                  <a class="hover_underline" href="/users/<%= @user.id %>/posts">posts</a>
                 </td>
               </tr>
-              <tr>
+              <tr class="font13-black">
                 <td></td>
                 <td>
-                  <a href="/users/<%= @user.id %>/comments">comments</a>
+                  <a class="hover_underline" href="/users/<%= @user.id %>/comments">comments</a>
                 </td>
               </tr>
             </tbody>

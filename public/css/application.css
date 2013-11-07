@@ -28,9 +28,71 @@ th {
 
 a {
   text-decoration: none;
+  color: #000000;
+}
+
+a:visited {
+  color: #000000;
+}
+
+a:active {
+  color: #000000;
 }
 
 .font13-gray {
   font-size: 13px;
   color: rgb(130, 130, 130);
+}
+
+.font13-black {
+  font-size: 13px;
+  color: #000000;
+}
+
+.orange_header_td {
+  background-color: #ff6600;
+}
+
+.login-link-right {
+  width:376px;
+  text-align: right;
+}
+
+.subtext {
+  font-size: 9px;
+  color: rgb(130, 130, 130);
+}
+
+.subtext a {
+  color: rgb(130, 130, 130);
+  text-decoration: 
+}
+
+.subtext a:visited {
+  color: rgb(130, 130, 130);
+}
+
+.subtext a:active {
+  color: rgb(130, 130, 130);
+}
+
+.subtext a:hover {
+  text-decoration: underline;
+}
+
+.comments_arrow_td {
+  vertical-align: top;
+}
+
+.hover_underline:hover {
+  text-decoration: underline;
+}
+
+.comments_td {
+  margin-top: 0;
+}
+
+.simpletext_input {
+  margin: 3px;
+  width:350px;
 }

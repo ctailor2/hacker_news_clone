@@ -3,7 +3,7 @@
     <tbody>
       <!-- header -->
       <tr>
-        <td>
+        <td class="orange_header_td">
           <%= erb :_header %>
         </td>
       </tr>
@@ -18,9 +18,9 @@
               <% num = 1 %>
               <% @posts.each do |post| %>
               <!-- first tr for title -->
-              <tr>
-                <td><%= num %></td>
-                <td>*</td>
+              <tr class="font13-black">
+                <td><%= num %>.</td>
+                <td><img src="https://news.ycombinator.com/grayarrow.gif"></td>
                 <td><a href="<%= post.url %>"><%= post.title %></a></td>
               </tr>
               <!-- second tr for time created, and link to comments -->

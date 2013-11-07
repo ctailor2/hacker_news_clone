@@ -2,7 +2,7 @@
   <table class="main-table">
     <tbody>
       <tr>
-        <td>
+        <td class="orange_header_td">
           <%= erb :_header %>
         </td>
       </tr>
@@ -11,14 +11,14 @@
         <td>
           <form>
             <table>
-              <tbody>
-                <tr>
-                  <td class="font13-gray">title</td>
-                  <td><input type="text" name="post[title]"></td>
-                </tr>
+              <tbody class="font13-gray">
                 <tr>
                   <td>title</td>
-                  <td><input type="text" name="post[url]"></td>
+                  <td><input class="simpletext_input" type="text" name="post[title]"></td>
+                </tr>
+                <tr>
+                  <td>url</td>
+                  <td><input class="simpletext_input" type="text" name="post[url]"></td>
                 </tr>
                 <tr>
                   <td></td>

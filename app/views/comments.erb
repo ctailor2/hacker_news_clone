@@ -3,7 +3,7 @@
     <tbody>
       <!-- header -->
       <tr>
-        <td>
+        <td class="orange_header_td">
           <%= erb :_header %>
         </td>
       </tr>
@@ -29,10 +29,17 @@
                 <td>
                   <table>
                     <tbody>
+                      <tr class="subtext">
+                        <td class="comments_arrow_td"><img src="https://news.ycombinator.com/grayarrow.gif"></td>
+                        <td>
+                          <a href="/users/<%= comment.user.id %>"><%= comment.user.username %></a>
+                        </td>
+                      </tr>
                       <tr>
-                        <td>|</td>
-                        <td>*</td>
-                        <td><%= comment.text %></td>
+                        <td></td>
+                        <td class="font13-black">
+                          <%= comment.text %>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
