@@ -80,5 +80,8 @@ post '/register' do
     @errors = user.errors.full_messages
     erb :login, :layout => false
   end
+end
 
+get '/create' do
+  erb :create
 end

@@ -5,6 +5,11 @@
   border: 1px dotted black;
 }
 
+.main-table-wrapper {
+  margin-top: 10px 0 10px 0;
+  font-family: verdana;
+}
+
 th {
   text-align: left;
 }
@@ -19,4 +24,13 @@ th {
   width:85%;
   margin:auto;
   background-color: #f6f6ef;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font13-gray {
+  font-size: 13px;
+  color: rgb(130, 130, 130);
 }
