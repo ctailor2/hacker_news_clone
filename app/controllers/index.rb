@@ -51,16 +51,15 @@ get '/create' do
 end
 
 post '/posts' do
-  post = Post.new(params[:post])
+  user_id = current_user.id
+  post = Post.create(user_id: user_id, title: params[:title], url: params[:url], text: params[:text])
 
-  if post.valid?
-    if params[:url] && params[:url].strip.length > 0
-      post.save
-      redirect to('/posts')
+  if post
+    if params[:url]
+      redirect to('/')
     else
-      post.url = "/posts/#{post.id}"
-      post.save
-      redirect to('/posts')
+      Post.update(post.id, :url => "/posts/#{post.id}")
+      redirect to('/')
     end
   else
     @errors = post.errors.full_messages

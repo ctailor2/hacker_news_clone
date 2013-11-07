@@ -5,8 +5,9 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_many :comments
   validates :title, :presence => true
+  # The url validation isn't allowing the url to be updated on posts without urls.
+  validate :url_must_be_valid, :on => :create, :if => "url.length > 0"
   validate :url_or_text, :on => :create
-  validate :url_must_be_valid, :on => :create
 
   def url_must_be_valid
     unless url.match(URI::regexp)
