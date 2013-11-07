@@ -96,3 +96,8 @@ a:active {
   margin: 3px;
   width:350px;
 }
+
+.main_table_width {
+  width:85%;
+  text-align: center;
+}

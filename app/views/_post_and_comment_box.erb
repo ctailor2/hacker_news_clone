@@ -4,6 +4,12 @@
       <td><img src="https://news.ycombinator.com/grayarrow.gif"></td>
       <td class="font13-black"><a href="<%= @post.url %>"><%= @post.title %></a></td>
     </tr>
+    <% if @post.url == "/posts/#{@post.id}" %>
+      <tr>
+        <td></td>
+        <td class="font13-black"><%= @post.text %></td>
+      </tr>
+    <% end %>
     <tr>
       <td></td>
       <td class="subtext">

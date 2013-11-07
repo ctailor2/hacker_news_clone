@@ -9,7 +9,7 @@
       <tr style="height:10px"></tr>
       <tr>
         <td>
-          <form>
+          <form action="/posts" method="POST">
             <table>
               <tbody class="font13-gray">
                 <tr>
@@ -44,4 +44,13 @@
       </tr>
     </tbody>
   </table>
+  <br>
+  <div class="main_table_width">
+    <% if @errors %>
+      <% @errors.each do |message| %>
+        <p style="color:red"><%= message %></p>
+      <% end %>
+    <% end %>
+  </div>
 </div>
+
